@@ -26,16 +26,11 @@ function sendMessage() {
       var randomResponse = generateRandomResponse();
       var responseElement = document.createElement('p');
       responseElement.className = 'bot-message';
-      //messageArea.appendChild(responseElement);
-      
-      messageArea.appendChild('<p class="bot-message"><strong>エセChat GPT:</strong> ' + responseElement + '</p>');
-    
+      messageArea.appendChild(responseElement);
 
-      
-      
       // 1文字ずつ出力するアニメーション
-      animateMessage(randomResponse, responseElement);
-      
+      animateMessage('(Not GPT)：' + randomResponse, responseElement);
+
       // メッセージエリアを最下部までスクロール
       messageArea.scrollTop = messageArea.scrollHeight;
     }, 1000);
