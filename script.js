@@ -27,7 +27,7 @@ function sendMessage() {
       var responseElement = document.createElement('p');
       responseElement.className = 'bot-message';
        // messageArea.innerHTML += '<p><strong>Not GPT:</strong> ' + randomResponse + '</p>';
-      messageArea.appendChild'<p><strong>Not GPT:</strong> ' + (responseElement) + '</p>';
+      messageArea.appendChild (responseElement) ;
 
       // 1文字ずつ出力するアニメーション
       animateMessage(randomResponse, responseElement);
