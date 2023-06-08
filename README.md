@@ -1,1 +1,3 @@
 # not-ChatGPT
+
+これはエセChatGPTです。
