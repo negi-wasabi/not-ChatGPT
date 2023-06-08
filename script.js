@@ -28,7 +28,7 @@ function sendMessage() {
       responseElement.className = 'bot-message';
       //messageArea.appendChild(responseElement);
       
-      messageArea.appendChild  '<p class="bot-message"><strong>エセChat GPT:</strong> ' + randomResponse + '</p>' (responseElement);
+      messageArea.appendChild('<p class="bot-message"><strong>エセChat GPT:</strong> ' + responseElement + '</p>');
     
 
       
