@@ -26,8 +26,8 @@ function sendMessage() {
       var randomResponse = generateRandomResponse();
       var responseElement = document.createElement('p');
       responseElement.className = 'bot-message';
-       // messageArea.innerHTML += '<p><strong>エセChat GPT:</strong> ' + randomResponse + '</p>';
-      messageArea.appendChild('<p><strong>エセChat GPT:</strong> ' + responseElement + '</p>');
+       // messageArea.innerHTML += '<p><strong>Not GPT:</strong> ' + randomResponse + '</p>';
+      messageArea.appendChild'<p><strong>Not GPT:</strong> ' + (responseElement) + '</p>';
 
       // 1文字ずつ出力するアニメーション
       animateMessage(randomResponse, responseElement);
