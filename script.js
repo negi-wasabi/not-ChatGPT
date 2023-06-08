@@ -17,16 +17,36 @@ function sendMessage() {
   var userMessage = userInput.value.trim();
 
   if (userMessage !== '') {
-    messageArea.innerHTML += '<p><strong>ユーザー:</strong> ' + userMessage + '</p>';
+    messageArea.innerHTML += '<p class="user-message"><strong>ユーザー:</strong> ' + userMessage + '</p>';
     userInput.value = '';
 
-    // ランダムな返答を生成
-    var randomResponse = generateRandomResponse();
-    messageArea.innerHTML += '<p><strong>エセChat GPT:</strong> ' + randomResponse + '</p>';
+    // 1秒の遅延を追加してから返答を生成
+    setTimeout(function() {
+      // ランダムな返答を生成
+      var randomResponse = generateRandomResponse();
+      var responseElement = document.createElement('p');
+      responseElement.className = 'bot-message';
+      messageArea.appendChild(responseElement);
 
-    // メッセージエリアを最下部までスクロール
-    messageArea.scrollTop = messageArea.scrollHeight;
+      // 1文字ずつ出力するアニメーション
+      animateMessage(randomResponse, responseElement);
+      
+      // メッセージエリアを最下部までスクロール
+      messageArea.scrollTop = messageArea.scrollHeight;
+    }, 1000);
   }
+}
+
+// 1文字ずつ出力するアニメーション
+function animateMessage(message, element) {
+  var index = 0;
+  var timer = setInterval(function() {
+    element.innerHTML += message.charAt(index);
+    index++;
+    if (index === message.length) {
+      clearInterval(timer);
+    }
+  }, 50);
 }
 
 // ランダムな返答の生成
