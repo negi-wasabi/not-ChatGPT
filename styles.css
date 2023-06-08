@@ -1,3 +1,8 @@
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
 #chat-container {
   width: 400px;
   margin: 0 auto;
@@ -12,6 +17,8 @@
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 #user-input {
@@ -22,4 +29,19 @@
 
 #send-button {
   padding: 5px 10px;
+}
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode #chat-container {
+  border-color: #ffffff;
+}
+
+.dark-mode #message-area {
+  border-color: #ffffff;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
